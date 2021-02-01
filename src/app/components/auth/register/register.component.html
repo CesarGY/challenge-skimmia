@@ -1,0 +1,44 @@
+<form class="example-form" [formGroup]="formRegister">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name" placeholder="Nombre" [errorStateMatcher]="matcher">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Correo electronico</mat-label>
+        <input type="email" formControlName="email" matInput placeholder="user@example.com"
+               autocomplete="off" [errorStateMatcher]="matcher">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Constraseña</mat-label>
+        <input type="password" matInput formControlName="password" placeholder="Constraseña"/>
+    </mat-form-field>
+
+    <div>
+
+        <button
+            mat-raised-button
+            color="primary"
+            class="example-full-width"
+            *ngIf="!loading"
+            [disabled]="formRegister.invalid"
+            (click)="register()"
+        >
+            Registrar
+        </button>
+
+        <button
+            mat-raised-button
+            color="primary"
+            class="example-full-width"
+            [disabled]="true" *ngIf="loading">
+            Espere... <i class="fa fa-spin fa-sync"></i>
+        </button>
+    </div>
+
+</form>
+
+

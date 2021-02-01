@@ -1,0 +1,11 @@
+<div class="banner-register">
+
+    <app-login *ngIf="isDefaultForm"></app-login>
+    <app-register *ngIf="!isDefaultForm"></app-register>
+
+    <div style="margin-top: 10px">
+        <button mat-button class="example-full-width" (click)="changeTypeForm('register')" *ngIf="isDefaultForm">Registrar</button>
+        <button mat-button class="example-full-width" (click)="changeTypeForm('login')" *ngIf="!isDefaultForm">Login</button>
+    </div>
+
+</div>

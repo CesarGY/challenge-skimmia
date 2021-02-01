@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    firebaseConfig: {
+        apiKey: 'AIzaSyAaQe69UsPudVLuTvN8WiVMUQBrcy4jG7k',
+        authDomain: 'challenge-skimmia.firebaseapp.com',
+        projectId: 'challenge-skimmia',
+        storageBucket: 'challenge-skimmia.appspot.com',
+        messagingSenderId: '310145651215',
+        appId: '1:310145651215:web:bd841aa9702301f716097a'
+    }
 };
 
 /*

@@ -1,0 +1,23 @@
+<section>
+    <img src="assets/img/img-6.jpg" alt="" class="img__main__section">
+</section>
+
+<section class="section__everyone">
+    <!--<img src="assets/img/img-2.jpg" alt="" class="img__secondary__section">-->
+    <div class="banner">
+        <h1 class="banner-title">MUSICA PARA TODOS!!</h1>
+        <span class="banner-btn">Miles de canciones</span>
+    </div>
+</section>
+
+<section class="section__forms" *ngIf="!isAuth" id="register">
+    <div>
+        <app-auth></app-auth>
+    </div>
+</section>
+
+<section class="section__map">
+
+    <app-position></app-position>
+
+</section>

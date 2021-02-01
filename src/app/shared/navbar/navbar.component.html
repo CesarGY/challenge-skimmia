@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="navbar-center">
+        <span class="nav-icon pointer" (click)="home()">
+            Inicio
+        </span>
+
+        <div class="nav-icon">
+            <span *ngIf="currentUser?.name"
+                  style="color: white; transition: all 0.3s linear"> {{currentUser?.name}}</span>
+        </div>
+        <div class="cart-btn">
+            <div style="display: flex">
+                <button mat-button color="primary" class="example-full-width" (click)="listSongs()" *ngIf="isAuth">Musica</button>
+                <button mat-button color="warn" class="example-full-width" (click)="logOut()" *ngIf="isAuth">Cerrar Sesión</button>
+                <a href="#register" mat-button color="warn" class="example-full-width" (click)="logOut()" *ngIf="!isAuth">Registrar / Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</nav>

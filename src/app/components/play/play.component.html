@@ -1,0 +1,65 @@
+<div class="play-container">
+
+    <div class="controls">
+        <h1 class="banner__title">Mi música</h1>
+
+        <div class="container__items__song">
+            <div class="songs">
+                <mat-list id="list-songs">
+                    <mat-list-item
+                        *ngFor="let song of songs;"
+                        id="{{song.id}}"
+                        (click)="selectItem(song.id)"
+                        style="background: none"
+                    >
+                        <span [ngClass]="{'playing__song' : song.enable }">{{song.id + 1}} - {{song.name}}</span>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <div class="album">
+                <img [src]="currentSongAlbum" alt="" style="width: 100%">
+            </div>
+        </div>
+
+        <div class="bar__controls">
+
+            <audio id="player" (timeupdate)="updateProgress()">
+                <source id="source" src="">
+                Audio not support :(
+            </audio>
+
+            <div class="group__buttons">
+                <button mat-fab color="primary" (click)="previousSong()">
+                    <mat-icon mat-list-icon>skip_previous</mat-icon>
+                </button>
+                <button mat-fab color="primary" (click)="togglePlay()">
+                    <mat-icon mat-list-icon *ngIf="player.paused">play_circle_filled</mat-icon>
+                    <mat-icon mat-list-icon *ngIf="!player.paused">pause</mat-icon>
+                </button>
+                <button mat-fab color="primary" (click)="nextSong()">
+                    <mat-icon mat-list-icon>skip_next</mat-icon>
+                </button>
+
+            </div>
+
+
+            <div class="progress__song__info">
+                Reproduciendo: {{currentSong}} <span  class="timer animate__animated animate__fadeIn animate__delay-1s" id="timer"></span>
+                <mat-progress-bar
+                    class="progress__song"
+                    mode="determinate" #progress
+                    [value]="progressValue" max="100"
+                    (click)="rewind($event)"
+                >
+                </mat-progress-bar>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+

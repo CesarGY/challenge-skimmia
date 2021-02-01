@@ -1,0 +1,14 @@
+<google-map
+    height="100%"
+    width="100%"
+    [center]="center"
+    [options]="options"
+>
+    <map-marker
+        *ngFor="let cord of coords"
+        [position]="cord.position"
+        [label]="cord.label"
+        [options]="cord.options"
+    >
+    </map-marker>
+</google-map>

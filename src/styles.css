@@ -1,1 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* --------------- Navbar ---------------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /*background: rgb(231, 226, 221); */
+    /*background: #B04959; */
+    background: #001B25;
+    z-index: 1;
+}
+
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    color: var(--mainWhite);
+}
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+
+/* --------------- End of Navbar ---------------- */
+
+
+/* Music for everyone */
+
+.section__everyone {
+    align-items: center;
+    background: url("./assets/img/img-3.jpg") center/cover no-repeat;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+}
+
+.banner-title {
+    font-size: 3.4rem !important;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+}
+
+.banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    color: var(--mainBlack);
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+
+
+/* --------------- Forms Login / Register  ---------------- */
+
+.section__forms {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, gray , #e84393);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-register {
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+
+/* --------------- End forms Login / Register  ---------------- */
+
+
+
+/* Section Map */
+
+.section__map {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.img__main__section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.img__secondary__section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
